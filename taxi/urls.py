@@ -12,7 +12,10 @@ from taxi.views import (
     ManufacturerListView,
     ManufacturerCreateView,
     ManufacturerUpdateView,
-    ManufacturerDeleteView, DriverDeleteView, DriverCreateView, DriverUpdateView,
+    ManufacturerDeleteView,
+    DriverDeleteView,
+    DriverCreateView,
+    DriverUpdateView,
 )
 
 urlpatterns = [
