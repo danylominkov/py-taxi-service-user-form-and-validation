@@ -10,7 +10,8 @@ class DriverLicenseUpdateForm(forms.ModelForm):
     def clean_license_number(self):
         license_number = self.cleaned_data.get("license_number")
 
-        if Driver.objects.filter(license_number=license_number).exclude(pk=self.instance.pk).exists():
+        if (Driver.objects.filter(license_number=license_number).
+                exclude(pk=self.instance.pk).exists()):
             raise forms.ValidationError(
                 "This license number is already taken."
             )
